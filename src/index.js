@@ -8,6 +8,7 @@ const app = express()
 // IMPORTAR RUTAS
 const productRoutes = require('./Routes/products');
 const salesRoutes = require('./Routes/sales');
+const authRoutes = require('./Routes/auth');
 
 // MIDDLEWARES
 app.use(cors())
@@ -32,6 +33,8 @@ app.use('/api/productos', productRoutes)
 
 // VENTAS
 app.use('/api/ventas', salesRoutes)
+// AUTENTICACIÓN
+app.use('/api/auth', authRoutes)
 
 // PUERTO
 const PORT = process.env.PORT || 4000
