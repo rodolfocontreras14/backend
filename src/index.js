@@ -6,8 +6,8 @@ const cors = require('cors')
 const app = express()
 
 // IMPORTAR RUTAS
-const productsRoutes = require('./routes/productsRoutes')
-const salesRoutes = require('./routes/salesRoutes')
+const productsRoutes = require('./Routes/productRoutes');
+const salesRoutes = require('./routes/sales');
 
 // MIDDLEWARES
 app.use(cors())
@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 // RUTAS API
 
 // PRODUCTOS
-app.use('/api/productos', productsRoutes)
+app.use('/api/productos', productRoutes)
 
 // VENTAS
 app.use('/api/ventas', salesRoutes)
