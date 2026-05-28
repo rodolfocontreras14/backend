@@ -6,7 +6,7 @@ const cors = require('cors')
 const app = express()
 
 // IMPORTAR RUTAS
-const productsRoutes = require('./Routes/productRoutes');
+const productRoutes = require('./Routes/products');
 const salesRoutes = require('./routes/sales');
 
 // MIDDLEWARES
