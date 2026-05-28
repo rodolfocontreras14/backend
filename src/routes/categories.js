@@ -1,0 +1,11 @@
+const express = require('express')
+const router = express.Router()
+const categoriesController = require('../controllers/categoriesController')
+const auth = require('../middlewares/authMiddleware')
+
+router.get('/', auth, categoriesController.list)
+router.post('/', auth, categoriesController.create)
+router.put('/:id', auth, categoriesController.update)
+router.delete('/:id', auth, categoriesController.remove)
+
+module.exports = router
